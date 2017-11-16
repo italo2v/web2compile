@@ -15,7 +15,7 @@ import subprocess
 import threading
 
 tinyos_dir = 'tinyos-2.1.2/apps/Blink/'
-cooja_dir = 'contiki-2.7/tools/cooja'
+#cooja_dir = 'contiki-2.7/tools/cooja'
 
 def escreve(username,password):
 
@@ -189,7 +189,7 @@ def localexec():
 @route('/coojaexec')
 def cooja():
     here = sys.path[0]
-    path = os.path.join(here, cooja_dir)
+    path = os.path.join(here, 'contiki-2.7', 'tools', 'cooja')
     #def open_cooja():
         #subprocess.Popen("chmod a+x ant run cooja", shell=True, cwd=path)
     #t = threading.Thread(target=open_cooja)
