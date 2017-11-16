@@ -1,9 +1,16 @@
 This application needs a TinyOS and ContikiOS environment installed to run.
 
+Web2Compile was developed using the TinyOS 2.1.2 and ContikiOS 2.7.
 
-Please, change the folder "tinyos_dir" to an application of TinyOS (Example: Blink) and the COOJA simulator folder "cooja_dir" in the files:
+You can download both from the links below and copy to the web2compile root folder.
 
-webserver.py at line 17 and 18
+TinyOS 2.1.2: https://mega.nz/#F!IFp23ZxA!AXZc--dQlKTENXbVoZOAVw
+ContikiOS 2.7: https://mega.nz/#F!cBJwVTyQ!nyN8p-vt0Ap7KWyyAzr5DA
+
+
+Please, change the folder "tinyos_dir" to an application of TinyOS (Example: Blink) in the files:
+
+webserver.py at line 17
 statis/JS/globals/js at line 13
 
 Enjoy :)
