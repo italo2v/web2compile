@@ -26,6 +26,7 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 	
 	<div align=center id="buttons">
 		<button type="button" id="openUpload">Open upload box</button>
+		<button type="button" id="openCooja">Open Cooja</button>
 		<form action="" method="post" class="dropzone" id="my-awesome-dropzone" enctype="multipart/form-data" style="width:600px; overflow-y: scroll;">
   		<input type="file" name="upload" id="upload"  multiple style="display:none;"/>
   			<!--<div class="dz-preview dz-file-preview">
@@ -79,6 +80,7 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
  	</div>		
 
 </body>
+
 
 
 

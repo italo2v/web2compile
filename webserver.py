@@ -12,8 +12,9 @@ from bottle import *
 import signal
 import pexpect
 import subprocess
+import threading
 
-tinyos_dir = '/opt/tinyos-2.1.2/apps/Blink/'
+tinyos_dir = 'tinyos-2.1.2/apps/Blink/'
 
 def escreve(username,password):
 
@@ -184,7 +185,25 @@ def localexec():
         return error+split.pop()
     return out+err+'\n'
 
-
-
+@route('/coojaexec')
+def cooja():
+    here = sys.path[0]
+    path = os.path.join(here,'contiki-2.7','tools','cooja')
+    #def open_cooja():
+        #subprocess.Popen("chmod a+x ant run cooja", shell=True, cwd=path)
+    #t = threading.Thread(target=open_cooja)
+    #t.start()
+    #redirect("/")
+    cmd = request.forms.get('cmd')
+    process = subprocess.Popen("ant run", shell=True,cwd=path,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err = process.communicate()
+    msg = "*** Successfully built micaz TOSSIM library."
+    error = "gcc: error:"
+    if msg in out:
+        return msg
+    elif error in err:
+        split = err.split(error)
+        return error+split.pop()
+    return out+err+'\n'
 
 run(host='localhost', port=8080)
