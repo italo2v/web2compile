@@ -4,8 +4,8 @@ Web2Compile was developed using the TinyOS 2.1.2 and ContikiOS 2.7.
 
 You can download both from the links below and copy to the web2compile root folder.
 
-TinyOS 2.1.2: https://mega.nz/#F!IFp23ZxA!AXZc--dQlKTENXbVoZOAVw
-ContikiOS 2.7: https://mega.nz/#F!cBJwVTyQ!nyN8p-vt0Ap7KWyyAzr5DA
+TinyOS 2.1.2: https://github.com/tinyos/tinyos-release
+ContikiOS 2.7: http://www.contiki-os.org/download.html
 
 
 Please, change the folder "tinyos_dir" to an application of TinyOS (Example: Blink) in the files:
